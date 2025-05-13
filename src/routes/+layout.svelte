@@ -4,7 +4,8 @@
 	import { repositoryName } from '$lib/prismicio';
 	import '../app.css';
 	import '@fontsource-variable/urbanist';
-	import Footer from '$lib/components/footer.svelte';
+	import Footer from '$lib/components/Footer.svelte';
+	import Header from '$lib/components/Header.svelte';
 
 	export let data;
 </script>
@@ -23,7 +24,7 @@
 	{/if}
 </svelte:head>
 
-<header>Header</header>
+<Header settings={data.settings} />
 
 <main>
 	<slot />
