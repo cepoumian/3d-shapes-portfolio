@@ -59,8 +59,12 @@
 						<NavBarLink field={link} {label} type="mobile" on:click={onLinkClick} />
 					</li>
 				{/each}
-				{#if isFilled.link(settings.data.github_link)}
-					<Button linkField={settings.data.github_link} label={settings.data.cta_label} showIcon />
+				{#if isFilled.link(settings.data.linkedin_link)}
+					<Button
+						linkField={settings.data.linkedin_link}
+						label={settings.data.cta_label}
+						showIcon
+					/>
 				{/if}
 			</ul>
 
@@ -71,9 +75,9 @@
 						<NavBarLink field={link} {label} type="desktop" on:click={onLinkClick} />
 					</li>
 				{/each}
-				{#if isFilled.link(settings.data.github_link)}
+				{#if isFilled.link(settings.data.linkedin_link)}
 					<Button
-						linkField={settings.data.github_link}
+						linkField={settings.data.linkedin_link}
 						label={settings.data.cta_label}
 						class="ml-3"
 						showIcon
