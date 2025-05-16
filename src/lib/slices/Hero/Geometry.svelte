@@ -34,6 +34,10 @@
 		{ color: 0x2c3e50, roughness: 0.1, metalness: 0.5 }
 	];
 	function getRandomMaterial() {
+		const randomInt = gsap.utils.random(1, 10, 1);
+		if (randomInt === 1) {
+			return new THREE.MeshNormalMaterial();
+		}
 		return new THREE.MeshStandardMaterial(gsap.utils.random(materialParams));
 	}
 
