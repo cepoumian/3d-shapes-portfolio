@@ -14,8 +14,18 @@ const mapper: SliceMapper<
 
 	const items =
 		slice.primary.content_type === 'Blog'
-			? await client.getAllByType('blogpost')
-			: await client.getAllByType('project');
+			? await client.getAllByType('blogpost', {
+					orderings: {
+						field: 'document.first_publication_date',
+						direction: 'desc'
+					}
+				})
+			: await client.getAllByType('project', {
+					orderings: {
+						field: 'document.first_publication_date',
+						direction: 'desc'
+					}
+				});
 
 	return { slice, items };
 };
