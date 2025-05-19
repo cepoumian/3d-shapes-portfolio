@@ -32,7 +32,7 @@
 		});
 	});
 
-	const onItemEnter: Action<HTMLElement, number> = (node, index) => {
+	/* const onItemEnter: Action<HTMLElement, number> = (node, index) => {
 		gsap.fromTo(
 			node,
 			{
@@ -63,7 +63,7 @@
 		return {
 			destroy() {}
 		};
-	};
+	}; */
 
 	const handleMouseMove = (e: MouseEvent) => {
 		const mousePos = { x: e.clientX, y: e.clientY + window.scrollY };
@@ -104,11 +104,12 @@
 
 <ul on:mouseleave={onMouseLeave} class="grid border-b border-b-slate-100">
 	{#each items as post, index (post.id + index)}
-		<li
+		<!-- <li
 			on:mouseenter={() => onMouseEnter(index)}
 			class="content-list-item opacity-0"
 			use:onItemEnter={index}
-		>
+		> -->
+		<li on:mouseenter={() => onMouseEnter(index)} class="content-list-item">
 			<PrismicLink
 				document={post}
 				class="flex flex-col justify-between border-t border-t-slate-100 py-10 text-slate-200 md:flex-row"
