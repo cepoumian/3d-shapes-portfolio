@@ -56,7 +56,7 @@
 				</li>
 				{#each settings.data.nav_item as { label, link }}
 					<li class="first:mt-8">
-						<NavBarLink field={link} {label} type="mobile" on:click={onLinkClick} />
+						<NavBarLink field={link} {label} type="mobile" {onLinkClick} />
 					</li>
 				{/each}
 				{#if isFilled.link(settings.data.linkedin_link)}
@@ -72,7 +72,7 @@
 			<ul class="relative z-50 hidden flex-row items-center gap-1 bg-transparent py-0 md:flex">
 				{#each settings.data.nav_item as { label, link }}
 					<li>
-						<NavBarLink field={link} {label} type="desktop" on:click={onLinkClick} />
+						<NavBarLink field={link} {label} type="desktop" {onLinkClick} />
 					</li>
 				{/each}
 				{#if isFilled.link(settings.data.linkedin_link)}

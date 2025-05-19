@@ -65,7 +65,7 @@
 			>
 				<Scene />
 			</div>
-			<div class="col-start-1 md:row-start-1">
+			<div class="col-start-1 md:row-start-1 text-center md:text-left">
 				<h1
 					class="mb-2 md:mb-2 text-[clamp(3rem,20vmin,13rem)] font-extrabold leading-none
 		tracking-tighter text-nowrap"

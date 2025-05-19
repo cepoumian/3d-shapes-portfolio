@@ -15,11 +15,11 @@
 		gsap.fromTo(
 			'.avatar',
 			{
-				opacity: 0,
-				scale: 1.4
+				opacity: 0
+				// scale: 1.4
 			},
 			{
-				scale: 1,
+				// scale: 1,
 				opacity: 1,
 				duration: 1.3,
 				ease: 'power3.inOut'

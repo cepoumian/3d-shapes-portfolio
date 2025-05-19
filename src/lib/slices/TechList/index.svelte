@@ -48,19 +48,19 @@
 	bind:this={component}
 >
 	<Bounded as="div">
-		<Heading size="xl" class="mb-8" tag="h2">
+		<Heading size="lg" class="mb-8" tag="h2">
 			{slice.primary.heading}
 		</Heading>
 	</Bounded>
 
 	{#each slice.primary.item as { tech_color, tech_name }}
 		<div
-			class="tech-row mb-8 flex items-center justify-center gap-4 text-slate-700"
+			class="tech-row mb-8 flex items-center justify-center gap-4 text-slate-700 w-full"
 			aria-label={tech_name || undefined}
 		>
 			{#each Array(15) as _, index}
 				<span
-					class="tech-item text-8xl font-extrabold uppercase tracking-tighter"
+					class="tech-item font-extrabold uppercase tracking-tighter text-5xl md:text-7xl"
 					style="color: {index === 7 && tech_color ? tech_color : 'inherit'};"
 				>
 					{tech_name}
