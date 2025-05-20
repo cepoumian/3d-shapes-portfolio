@@ -59,13 +59,9 @@
 						<NavBarLink field={link} {label} type="mobile" {onLinkClick} />
 					</li>
 				{/each}
-				{#if isFilled.link(settings.data.linkedin_link)}
-					<Button
-						linkField={settings.data.linkedin_link}
-						label={settings.data.cta_label}
-						showIcon
-					/>
-				{/if}
+				<!-- {#if isFilled.link(settings.data.cta_link)}
+					<Button linkField={settings.data.cta_link} label={settings.data.cta_label} showIcon />
+				{/if} -->
 			</ul>
 
 			<!-- Desktop Nav -->
@@ -75,14 +71,14 @@
 						<NavBarLink field={link} {label} type="desktop" {onLinkClick} />
 					</li>
 				{/each}
-				{#if isFilled.link(settings.data.linkedin_link)}
+				<!-- {#if isFilled.link(settings.data.cta_link)}
 					<Button
-						linkField={settings.data.linkedin_link}
+						linkField={settings.data.cta_link}
 						label={settings.data.cta_label}
 						class="ml-3"
 						showIcon
 					/>
-				{/if}
+				{/if} -->
 			</ul>
 		</div>
 	</nav>

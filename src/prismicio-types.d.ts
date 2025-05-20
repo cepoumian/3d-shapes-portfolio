@@ -102,6 +102,7 @@ export type BlogpostDocument<Lang extends string = string> = prismic.PrismicDocu
 >;
 
 type PageDocumentDataSlicesSlice =
+	| ContactoSlice
 	| ContentIndexSlice
 	| ExperienceSlice
 	| TechListSlice
@@ -503,6 +504,88 @@ type BiographySliceVariation = BiographySliceDefault;
  * - **Documentation**: https://prismic.io/docs/slice
  */
 export type BiographySlice = prismic.SharedSlice<'biography', BiographySliceVariation>;
+
+/**
+ * Primary content in *Contacto → Default → Primary*
+ */
+export interface ContactoSliceDefaultPrimary {
+	/**
+	 * Heading field in *Contacto → Default → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: contacto.default.primary.heading
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	heading: prismic.KeyTextField;
+
+	/**
+	 * Contact Info field in *Contacto → Default → Primary*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: contacto.default.primary.contact_info
+	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+	 */
+	contact_info: prismic.RichTextField;
+
+	/**
+	 * Contact Image field in *Contacto → Default → Primary*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: contacto.default.primary.contact_image
+	 * - **Documentation**: https://prismic.io/docs/field#image
+	 */
+	contact_image: prismic.ImageField<never>;
+
+	/**
+	 * Button Label field in *Contacto → Default → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: contacto.default.primary.button_label
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	button_label: prismic.KeyTextField;
+
+	/**
+	 * Button Link field in *Contacto → Default → Primary*
+	 *
+	 * - **Field Type**: Link
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: contacto.default.primary.button_link
+	 * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+	 */
+	button_link: prismic.LinkField<string, string, unknown, prismic.FieldState, never>;
+}
+
+/**
+ * Default variation for Contacto Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ContactoSliceDefault = prismic.SharedSliceVariation<
+	'default',
+	Simplify<ContactoSliceDefaultPrimary>,
+	never
+>;
+
+/**
+ * Slice variation for *Contacto*
+ */
+type ContactoSliceVariation = ContactoSliceDefault;
+
+/**
+ * Contacto Shared Slice
+ *
+ * - **API ID**: `contacto`
+ * - **Description**: Contacto
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ContactoSlice = prismic.SharedSlice<'contacto', ContactoSliceVariation>;
 
 /**
  * Primary content in *ContentIndex → Default → Primary*
@@ -944,6 +1027,10 @@ declare module '@prismicio/client' {
 			BiographySliceDefaultPrimary,
 			BiographySliceVariation,
 			BiographySliceDefault,
+			ContactoSlice,
+			ContactoSliceDefaultPrimary,
+			ContactoSliceVariation,
+			ContactoSliceDefault,
 			ContentIndexSlice,
 			ContentIndexSliceDefaultPrimary,
 			ContentIndexSliceVariation,

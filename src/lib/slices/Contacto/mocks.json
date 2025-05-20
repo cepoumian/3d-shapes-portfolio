@@ -1,0 +1,62 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"heading": {
+				"__TYPE__": "FieldContent",
+				"value": "widely",
+				"type": "Text"
+			},
+			"contact_info": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Nostrud excepteur aliquip esse nulla consequat non occaecat aliquip cillum aliqua veniam. Elit nostrud veniam cillum sunt. Nulla exercitation ipsum aliquip ea id eiusmod elit eu proident consectetur dolor excepteur ex aute."
+						}
+					}
+				]
+			},
+			"contact_image": {
+				"origin": {
+					"id": "main",
+					"url": "https://images.unsplash.com/photo-1504198070170-4ca53bb1c1fa",
+					"width": 2747,
+					"height": 4120
+				},
+				"url": "https://images.unsplash.com/photo-1504198070170-4ca53bb1c1fa",
+				"width": 2747,
+				"height": 4120,
+				"edit": {
+					"zoom": 1,
+					"crop": {
+						"x": 0,
+						"y": 0
+					},
+					"background": "transparent"
+				},
+				"alt": "drawn",
+				"credits": null,
+				"__TYPE__": "ImageContent",
+				"thumbnails": {}
+			},
+			"button_label": {
+				"__TYPE__": "FieldContent",
+				"value": "movie",
+				"type": "Text"
+			},
+			"button_link": {
+				"__TYPE__": "LinkContent",
+				"key": "7825b8a9-93c4-4ea3-aeb6-f9e393b7986b",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "http://twitter.com",
+					"text": "support"
+				}
+			}
+		},
+		"items": []
+	}
+]
