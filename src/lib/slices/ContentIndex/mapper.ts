@@ -16,13 +16,13 @@ const mapper: SliceMapper<
 		slice.primary.content_type === 'Blog'
 			? await client.getAllByType('blogpost', {
 					orderings: {
-						field: 'document.first_publication_date',
+						field: 'document.last_publication_date',
 						direction: 'desc'
 					}
 				})
 			: await client.getAllByType('project', {
 					orderings: {
-						field: 'document.first_publication_date',
+						field: 'document.last_publication_date',
 						direction: 'desc'
 					}
 				});
